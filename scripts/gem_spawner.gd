@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 		get_parent().add_score()
 		spawn_gem()
 	
-	
 func spawn_gem():
 	gem = gem_scene.instantiate()
 	var x_position = randi_range(1, 1151) 
