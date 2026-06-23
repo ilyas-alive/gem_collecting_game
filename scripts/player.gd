@@ -3,6 +3,7 @@ class_name Playercontroller
 
 @export var move_speed = 20.0
 @export var sprint_increase = 2
+@onready var gem_spawner: Gemspawner = $"../GemSpawner"
 
 var direction : Vector2
 var sprinting = false

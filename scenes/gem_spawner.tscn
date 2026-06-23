@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbr0ohjc44vt8"]
+
+[ext_resource type="Script" uid="uid://dfk70g7gsrftd" path="res://scripts/gem_spawner.gd" id="1_lvkqu"]
+[ext_resource type="PackedScene" uid="uid://cs2d4q3psf3ew" path="res://scenes/gem.tscn" id="2_ihcdr"]
+
+[node name="GemSpawner" type="Node" unique_id=1238112904]
+script = ExtResource("1_lvkqu")
+gem_scene = ExtResource("2_ihcdr")
