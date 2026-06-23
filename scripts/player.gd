@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Playercontroller
 
-@export var move_speed = 20.0
+@export var move_speed = 100.0
 @export var sprint_increase = 2
 @onready var gem_spawner: Gemspawner = $"../GemSpawner"
 

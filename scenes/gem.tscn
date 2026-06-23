@@ -46,6 +46,7 @@ _data = {
 }
 
 [node name="Gem" type="Area2D" unique_id=1654601383]
+scale = Vector2(5, 5)
 script = ExtResource("1_mpwtx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=875107821]
