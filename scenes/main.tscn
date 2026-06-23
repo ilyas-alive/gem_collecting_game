@@ -178,3 +178,7 @@ tile_set = SubResource("TileSet_7juri")
 position = Vector2(513, 278)
 
 [node name="GemSpawner" parent="." unique_id=1238112904 instance=ExtResource("5_tbgi4")]
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1339685181]
+wait_time = 10.0
+one_shot = true

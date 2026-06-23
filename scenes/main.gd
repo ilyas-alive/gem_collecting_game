@@ -1,7 +1,26 @@
 extends Node2D
-var score = 0
+@onready var score_timer: Timer = $ScoreTimer
 
-func _process(delta: float) -> void:
-	print(score)
+var score_wait : int
+var time_left : int
+var score = 0
+var past_score = 0
+
+
+
 func add_score():
 	score += 1
+	print(score)
+
+	
+
+func _ready():
+	score_timer.timeout.connect(_on_score_timeout)
+
+func _on_score_timeout():
+	game_over()
+
+
+func game_over():
+	print("Game Over")
+	get_tree().paused = true
