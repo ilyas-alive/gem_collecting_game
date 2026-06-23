@@ -40,3 +40,4 @@ func _physics_process(delta: float) -> void:
 		sprinting = false
 	velocity = delta * move_speed * direction.normalized() * 200 * sprint_multiplier
 	move_and_slide()
+	position = position.clamp(Vector2(0, 0), Vector2(1152, 648))
