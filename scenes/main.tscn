@@ -184,3 +184,15 @@ scale = Vector2(5, 5)
 [node name="ScoreTimer" type="Timer" parent="." unique_id=1339685181]
 wait_time = 3135.838
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=998294476]
+position = Vector2(577, 325)
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = true
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=2144321000]
+offset_left = -69.0
+offset_top = -56.0
+offset_right = -11.0
+offset_bottom = -30.0
+text = "Score"

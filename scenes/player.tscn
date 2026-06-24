@@ -154,9 +154,6 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_qlg0r")
 speed_scale = 1.6
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1383327707]
-position_smoothing_enabled = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1488633639]
 position = Vector2(0, -5)
 shape = SubResource("CapsuleShape2D_7juri")
