@@ -1,5 +1,4 @@
 extends Node2D
-@onready var score_timer: Timer = $ScoreTimer
 @onready var score_label: Label = $ScoreLabel
 
 var score_wait : int
@@ -14,7 +13,6 @@ func _process(delta: float) -> void:
 
 func add_score():
 	score += 1
-	print(score)
 
 
 func game_over():
