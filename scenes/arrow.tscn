@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://clk0mxghewvgb"]
+
+[ext_resource type="Script" uid="uid://byuckf76wr5r1" path="res://scripts/arrow.gd" id="1_23jat"]
+[ext_resource type="Texture2D" uid="uid://dnlmml2bis0nj" path="res://Sprites/CrossbowArrow.png" id="1_umosx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23jat"]
+size = Vector2(30, 4)
+
+[node name="arrow" type="CharacterBody2D" unique_id=327892001]
+script = ExtResource("1_23jat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1172233903]
+texture = ExtResource("1_umosx")
+region_enabled = true
+region_rect = Rect2(48, 7, 48, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=908938611]
+shape = SubResource("RectangleShape2D_23jat")

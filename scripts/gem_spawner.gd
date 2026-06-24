@@ -21,7 +21,3 @@ func spawn_gem():
 	add_child(gem)
 	gem_position = Vector2(x_position, y_position)
 	gem.position = gem_position
-
-func remove_gem():
-	if gem != null:
-		gem.queue_free()
