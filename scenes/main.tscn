@@ -201,14 +201,14 @@ offset_bottom = 8.0
 theme_override_font_sizes/font_size = 64
 text = "Score"
 
-[node name="crossbow3" parent="." unique_id=708357054 instance=ExtResource("6_tefeu")]
-position = Vector2(-66, 530)
+[node name="crossbow" parent="." unique_id=861732000 instance=ExtResource("6_tefeu")]
+position = Vector2(-66, 67)
 
 [node name="crossbow2" parent="." unique_id=884045849 instance=ExtResource("6_tefeu")]
 position = Vector2(-72, 283)
 
-[node name="crossbow" parent="." unique_id=861732000 instance=ExtResource("6_tefeu")]
-position = Vector2(-66, 67)
+[node name="crossbow3" parent="." unique_id=708357054 instance=ExtResource("6_tefeu")]
+position = Vector2(-66, 530)
 
 [node name="edge" type="CharacterBody2D" parent="." unique_id=1925173752]
 script = ExtResource("7_o6xl0")

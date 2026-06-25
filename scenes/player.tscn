@@ -133,8 +133,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7juri"]
-radius = 5.0
-height = 10.0
+radius = 4.0
+height = 14.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1831481424]
 script = ExtResource("1_g2els")
@@ -155,5 +155,5 @@ libraries/ = SubResource("AnimationLibrary_qlg0r")
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1488633639]
-position = Vector2(0, -5)
+position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_7juri")

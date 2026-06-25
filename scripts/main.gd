@@ -4,11 +4,12 @@ extends Node2D
 var score_wait : int
 var time_left : int
 var score = 0
-var past_score = 0
+var del = 0
 
 
 func _process(delta: float) -> void:
 	score_label.text = "Score: %d" % score
+
 
 
 func add_score():
