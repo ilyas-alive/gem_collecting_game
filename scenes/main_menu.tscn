@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://u0ar5xs4cvft"]
+
+[ext_resource type="Script" uid="uid://c4i2ioh4nb82r" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://qbq0q856vmao" path="res://Sprites/main_menu_pic.png" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://3t7p7koqj8gv" path="res://Sprites/game_name.png" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://d08f1g7dk1jax" path="res://Sprites/controls.png" id="4_wu84c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7juri"]
+texture = ExtResource("1_ekxnf")
+modulate_color = Color(0.95596343, 0.9559633, 0.95596343, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2c4oh"]
+texture = ExtResource("2_bqqt6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8pn85"]
+texture = ExtResource("4_wu84c")
+
+[node name="MainMenu" type="Control" unique_id=1034375633]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="Background" type="Panel" parent="." unique_id=1940295078]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7juri")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1371565373]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -20.0
+offset_right = 177.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1245140531]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+text = "START"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=545715388]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+text = "QUIT"
+
+[node name="GameName" type="Panel" parent="." unique_id=1028106156]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27400002
+anchor_top = 0.095000006
+anchor_right = 0.27400002
+anchor_bottom = 0.095000006
+offset_left = 0.35202026
+offset_top = -74.56
+offset_right = 74.10678
+offset_bottom = 10.546799
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.470706, 4.05373)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2c4oh")
+
+[node name="Controls" type="Panel" parent="." unique_id=1598224742]
+layout_mode = 0
+offset_left = 25.000004
+offset_top = 221.0
+offset_right = 65.0
+offset_bottom = 261.0
+scale = Vector2(8.506549, 5.7814803)
+theme_override_styles/panel = SubResource("StyleBoxTexture_8pn85")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

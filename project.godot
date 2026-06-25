@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Gem Collector"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="uid://u0ar5xs4cvft"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+KeepScore="*uid://cgxkksi0ueupv"
 
 [display]
 
@@ -23,6 +27,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="Gem Collector"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [input]
 

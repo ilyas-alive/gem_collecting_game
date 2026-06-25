@@ -1,10 +1,10 @@
 extends Node2D
+
 @onready var score_label: Label = $CanvasLayer/ScoreLabel
 
 var score_list: Array
 var hearts_list: Array
-var hearts = 5
-var score = 0
+var hearts = 3
 
 func _ready() -> void:
 	var hearts_bar: HBoxContainer = $CanvasLayer/HeartsBar
@@ -12,17 +12,17 @@ func _ready() -> void:
 		hearts_list.append(heart)
 
 func _process(delta: float) -> void:
-	score_label.text = "Score: %d" % score
+	score_label.text = "Score: %d" % KeepScore.score
 
 func add_score():
-	score += 1
+	KeepScore.score += 1
 
 func score_to_list_reset():
-	score_list.append(score)
+	score_list.append(KeepScore.score)
 	hearts -= 1
 	update_heart_display()
-	score = 0
-	if len(score_list) >= 5:
+	KeepScore.score = 0
+	if len(score_list) >= 3:
 		game_over()
 
 func update_heart_display():
@@ -32,9 +32,8 @@ func update_heart_display():
 func game_over():
 	print("Game Over")
 	
-	var total_score = 0
-	for score in score_list:
-		total_score += score
+	for past_score in score_list:
+		KeepScore.total_score += past_score
 		
-	print("Total Score: ", total_score)
-	get_tree().quit()
+	print("Total Score: ", KeepScore.total_score)
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

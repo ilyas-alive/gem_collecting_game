@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cfe1jrcf4fod5"]
+
+[ext_resource type="Script" uid="uid://c15fdy7sanc5i" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://qbq0q856vmao" path="res://Sprites/main_menu_pic.png" id="1_xeevv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqhvx"]
+texture = ExtResource("1_xeevv")
+modulate_color = Color(0.44291013, 0.44291124, 0.44290975, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameOver" type="Control" unique_id=226568385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqhvx")
+
+[node name="Background" type="Panel" parent="." unique_id=1783606003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wqhvx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=102235154]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 89.0
+offset_right = 177.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=885648005]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbwuq")
+text = "RESTART"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=860652973]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbwuq")
+text = "QUIT"
+
+[node name="TotalScore" type="Label" parent="." unique_id=1015118957]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 243.0
+offset_right = 749.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 64
+text = "Total Score: "
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
