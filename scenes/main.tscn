@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbr0ohjc44vt8" path="res://scenes/gem_spawner.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://c75gdn474da6e" path="res://scenes/crossbow.tscn" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://8hv5wusiww0a" path="res://scripts/edge.gd" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://qe45fx4i2d5o" path="res://scenes/hearts_bar.tscn" id="8_tipki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
 texture = ExtResource("1_o5qli")
@@ -170,7 +171,7 @@ sources/0 = SubResource("TileSetAtlasSource_0wfyh")
 sources/2 = SubResource("TileSetAtlasSource_jyhfs")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7juri"]
-size = Vector2(146, 853)
+size = Vector2(146, 755)
 
 [node name="Main" type="Node2D" unique_id=1232804781]
 script = ExtResource("1_tbgi4")
@@ -183,7 +184,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAIAAAACAAA
 tile_set = SubResource("TileSet_7juri")
 
 [node name="Player" parent="." unique_id=1831481424 instance=ExtResource("2_0wfyh")]
-position = Vector2(500, 587)
+position = Vector2(596, 447.00006)
 scale = Vector2(5, 5)
 
 [node name="GemSpawner" parent="." unique_id=1238112904 instance=ExtResource("5_tbgi4")]
@@ -192,14 +193,6 @@ scale = Vector2(5, 5)
 position = Vector2(577, 325)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
-
-[node name="ScoreLabel" type="Label" parent="." unique_id=2144321000]
-offset_left = -5.0
-offset_top = -88.0
-offset_right = 166.0
-offset_bottom = 8.0
-theme_override_font_sizes/font_size = 64
-text = "Score"
 
 [node name="crossbow" parent="." unique_id=861732000 instance=ExtResource("6_tefeu")]
 position = Vector2(-66, 67)
@@ -214,5 +207,23 @@ position = Vector2(-66, 530)
 script = ExtResource("7_o6xl0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edge" unique_id=1806908609]
-position = Vector2(1249, 263.5)
+position = Vector2(1249, 312.5)
 shape = SubResource("RectangleShape2D_7juri")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=71995736]
+layer = 8
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2144321000]
+offset_left = 71.0
+offset_top = -18.0
+offset_right = 242.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 64
+text = "Score"
+
+[node name="HeartsBar" parent="CanvasLayer" unique_id=796083852 instance=ExtResource("8_tipki")]
+offset_left = 870.00006
+offset_top = 30.0
+offset_right = 951.00006
+offset_bottom = 70.0
+scale = Vector2(2.9796886, 2.9796886)

@@ -17,5 +17,5 @@ func _physics_process(delta: float) -> void:
 		if collision.get_collider() is Edge:
 			queue_free()
 		elif collision.get_collider() is Playercontroller:
-			get_parent().get_parent().score = 0
+			get_parent().get_parent().score_to_list_reset()
 			queue_free()

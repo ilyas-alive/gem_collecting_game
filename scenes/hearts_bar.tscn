@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://qe45fx4i2d5o"]
+
+[ext_resource type="Texture2D" uid="uid://djnkx4erut8ox" path="res://Sprites/lifebar_16x16.png" id="1_5o703"]
+
+[node name="HeartsBar" type="HBoxContainer" unique_id=796083852]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="heart" type="TextureRect" parent="." unique_id=1453398892]
+custom_minimum_size = Vector2(12.8, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="heart" unique_id=1095939434]
+texture = ExtResource("1_5o703")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="heart2" type="TextureRect" parent="." unique_id=2141557316]
+custom_minimum_size = Vector2(12.8, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="heart2" unique_id=1586330086]
+texture = ExtResource("1_5o703")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="heart3" type="TextureRect" parent="." unique_id=1577050496]
+custom_minimum_size = Vector2(12.8, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="heart3" unique_id=867390234]
+texture = ExtResource("1_5o703")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="heart4" type="TextureRect" parent="." unique_id=1113805179]
+custom_minimum_size = Vector2(12.8, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="heart4" unique_id=520579409]
+texture = ExtResource("1_5o703")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="heart5" type="TextureRect" parent="." unique_id=2023604088]
+custom_minimum_size = Vector2(12.8, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="heart5" unique_id=35230986]
+texture = ExtResource("1_5o703")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
