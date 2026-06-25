@@ -37,4 +37,4 @@ func game_over():
 		total_score += score
 		
 	print("Total Score: ", total_score)
-	get_tree().paused = true
+	get_tree().quit()
