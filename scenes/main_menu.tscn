@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qbq0q856vmao" path="res://Sprites/main_menu_pic.png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://3t7p7koqj8gv" path="res://Sprites/game_name.png" id="2_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://d08f1g7dk1jax" path="res://Sprites/controls.png" id="4_wu84c"]
+[ext_resource type="AudioStream" uid="uid://bdt8n3rmppj0m" path="res://audio/button.mp3" id="5_8ln24"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7juri"]
 texture = ExtResource("1_ekxnf")
@@ -93,6 +94,10 @@ offset_right = 65.0
 offset_bottom = 261.0
 scale = Vector2(8.506549, 5.7814803)
 theme_override_styles/panel = SubResource("StyleBoxTexture_8pn85")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=825129951]
+stream = ExtResource("5_8ln24")
+volume_db = -12.0
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c15fdy7sanc5i" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="Texture2D" uid="uid://qbq0q856vmao" path="res://Sprites/main_menu_pic.png" id="1_xeevv"]
+[ext_resource type="AudioStream" uid="uid://c3x026bthq4cu" path="res://audio/game_over.mp3" id="3_tbwuq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqhvx"]
 texture = ExtResource("1_xeevv")
@@ -69,6 +70,10 @@ offset_right = 749.0
 offset_bottom = 339.0
 theme_override_font_sizes/font_size = 64
 text = "Total Score: "
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="." unique_id=8824775]
+stream = ExtResource("3_tbwuq")
+volume_db = -12.0
 
 [connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

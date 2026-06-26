@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c75gdn474da6e" path="res://scenes/crossbow.tscn" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://8hv5wusiww0a" path="res://scripts/edge.gd" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://qe45fx4i2d5o" path="res://scenes/hearts_bar.tscn" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://5k3hxqlysopx" path="res://audio/damage.mp3" id="9_85g3d"]
+[ext_resource type="AudioStream" uid="uid://dyyaamk45vnlp" path="res://audio/collect_gem.mp3" id="10_choun"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
 texture = ExtResource("1_o5qli")
@@ -227,3 +229,13 @@ offset_top = 30.0
 offset_right = 951.00006
 offset_bottom = 70.0
 scale = Vector2(2.9796886, 2.9796886)
+
+[node name="audio" type="Node" parent="." unique_id=1194010767]
+
+[node name="damage" type="AudioStreamPlayer2D" parent="audio" unique_id=340011907]
+stream = ExtResource("9_85g3d")
+volume_db = -12.0
+
+[node name="collect_gem" type="AudioStreamPlayer2D" parent="audio" unique_id=1797259971]
+stream = ExtResource("10_choun")
+volume_db = -12.0

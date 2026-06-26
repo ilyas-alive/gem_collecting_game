@@ -1,7 +1,10 @@
 extends Control
 
 @onready var total_score_label: Label = $TotalScore
+@onready var game_over_sound: AudioStreamPlayer2D = $GameOverSound
 
+func _ready() -> void:
+	game_over_sound.play()
 func _process(delta: float) -> void:
 	total_score_label.text = "Total Score: %d" % KeepScore.total_score
 

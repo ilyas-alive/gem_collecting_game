@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://day06ghv58wge" path="res://scripts/crossbow.gd" id="1_6sny2"]
 [ext_resource type="Texture2D" uid="uid://dlv5q5fmds3ii" path="res://Sprites/CrossbowShoot.png" id="2_tmy0e"]
 [ext_resource type="PackedScene" uid="uid://clk0mxghewvgb" path="res://scenes/arrow.tscn" id="2_ym1yd"]
+[ext_resource type="AudioStream" uid="uid://bx6ocplh8jtkd" path="res://audio/arrow.mp3" id="4_c5x4l"]
 
 [sub_resource type="Animation" id="Animation_ym1yd"]
 length = 0.001
@@ -66,3 +67,7 @@ shape = SubResource("RectangleShape2D_ym1yd")
 texture = ExtResource("2_tmy0e")
 region_enabled = true
 region_rect = Rect2(0, 0, 48, 22)
+
+[node name="launch_arrow" type="AudioStreamPlayer2D" parent="." unique_id=131513093]
+stream = ExtResource("4_c5x4l")
+volume_db = -12.0

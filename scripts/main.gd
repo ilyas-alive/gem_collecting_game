@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var score_label: Label = $CanvasLayer/ScoreLabel
+@onready var damage: AudioStreamPlayer2D = $audio/damage
+@onready var collect_gem: AudioStreamPlayer2D = $audio/collect_gem
 
 var score_list: Array
 var hearts_list: Array
@@ -16,9 +18,11 @@ func _process(delta: float) -> void:
 
 func add_score():
 	KeepScore.score += 1
+	collect_gem.play()
 
 func score_to_list_reset():
 	score_list.append(KeepScore.score)
+	damage.play()
 	hearts -= 1
 	update_heart_display()
 	KeepScore.score = 0
