@@ -1,6 +1,10 @@
 extends Control
 @onready var button_sound: AudioStreamPlayer2D = $ButtonSound
+@onready var quit_button: Button = $VBoxContainer/QuitButton
 
+func _ready() -> void:
+	if OS.has_feature("web"):
+		quit_button.visible = false
 
 func _on_start_button_pressed() -> void:
 	button_sound.play()
